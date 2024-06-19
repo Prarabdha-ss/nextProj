@@ -66,18 +66,18 @@ const authHandler: NextApiHandler = (req, res) => NextAuth(req, res, authOptions
 // Export the handler
 // export { authHandler as GET, authHandler as POST };
 
-const handleLogout: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
-  try {
-    await signOut({ redirect: false, callbackUrl: '/' }); // Perform logout
-    res.status(200).end(); // Send success response
-  } catch (error) {
-    console.error('Error logging out:', error);
-    res.status(500).end(); // Send error response
-  }
-};
+// const handleLogout: NextApiHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+//   try {
+//     await signOut({ redirect: false, callbackUrl: '/' }); // Perform logout
+//     res.status(200).end(); // Send success response
+//   } catch (error) {
+//     console.error('Error logging out:', error);
+//     res.status(500).end(); // Send error response
+//   }
+// };
 
 // Export the handlers
-export { authHandler as GET, authHandler as POST, handleLogout };
+export { authHandler as GET, authHandler as POST };
 
 
 
